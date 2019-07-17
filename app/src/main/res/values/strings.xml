@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">rubbishgame</string>
+
+    <!--网络相关-->
+
+    <string name="close_string">关闭</string>
+    <string name="error_unkown">未知错误</string>
+    <string name="error_http">网络连接错误</string>
+    <string name="error_system">服务器出错</string>
+    <string name="error_account_freeze">账户被冻结，请联系管理员</string>
+    <string name="error_api_no_perission">调用了无权限的API接口</string>
+    <string name="error_login">用户名或者密码错误</string>
+    <string name="error_http_400">bad request</string>
+    <string name="error_http_404">服务器资源找不到</string>
+    <string name="error_http_500">服务器错误</string>
+    <string name="error_socket_timeout">网络超时</string>
+    <string name="error_socket_unreachable">网络不可用</string>
+    <string name="error_malformedJsonException">数据转换失败</string>
+    <string name="error_token">登录失效，请重新登录</string>
+    <string name="loading">加载中…</string>
+    <string name="load_failed">加载失败，点击重试</string>
+    <string name="load_failed_no_network">网络失联了…\n请联网后点击重试</string>
+    <string name="empty">暂无相关信息!</string>
+    <string name="str_none"/>
+
+
+</resources>
