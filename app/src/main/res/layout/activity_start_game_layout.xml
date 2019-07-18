@@ -12,5 +12,7 @@
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             android:onClick="startGame"
-            android:text="开始分类"/>
+            android:text="开始分类"
+            android:textColor="@color/colorAccent"
+            android:textSize="32sp"/>
 </FrameLayout>

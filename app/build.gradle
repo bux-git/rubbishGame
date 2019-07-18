@@ -74,4 +74,16 @@ dependencies {
 
     //loading
     api 'com.github.ybq:Android-SpinKit:1.2.0'
+
+    //视频播放
+    //该依赖仅包含MediaPlayer解码
+    implementation 'com.kk.taurus.playerbase:playerbase:3.3.5'
+    //该依赖包含ijkplayer解码和MediaPlayer解码
+    implementation 'cn.jiajunhui:ijkplayer:335_088_007'
+    //缓存框架
+    implementation 'com.danikula:videocache:2.7.1'
+
+
+    //权限
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
 }

@@ -6,6 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 
 import com.common.base.BaseFragmentActivity;
+import com.zx.rubbishgame.banner.BannerBean;
+import com.zx.rubbishgame.banner.BannerFragment;
+import com.zx.rubbishgame.utils.DataCons;
+
+import java.util.ArrayList;
 
 /**
  * description：
@@ -32,7 +37,7 @@ public class StartGameActivity extends BaseFragmentActivity {
 
     @Override
     protected Fragment getFragment() {
-        return new Fragment();
+        return BannerFragment.getInstance((ArrayList<BannerBean>) DataCons.getBannerData());
     }
 
     @Override

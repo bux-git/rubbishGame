@@ -26,7 +26,7 @@ import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
 
 public class ImageLoader {
 
-    public static final int DEFAULT_IMG= R.drawable.ic_launcher_background;
+    public static final int DEFAULT_IMG= R.drawable.ic_default_img;
 
     public static void loadNewsImg(Object url, ImageView view) {
         Glide.with(view).load(handleImage(url))

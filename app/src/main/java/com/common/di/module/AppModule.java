@@ -1,7 +1,6 @@
 package com.common.di.module;
 
-import android.app.Application;
-
+import com.danikula.videocache.HttpProxyCacheServer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializationContext;
@@ -10,6 +9,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.reflect.TypeToken;
+import com.zx.rubbishgame.MyApplication;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -30,15 +30,15 @@ import dagger.Provides;
 @Module
 public class AppModule {
 
-    private Application mApplication;
+    private MyApplication mApplication;
 
-    public AppModule(Application application) {
+    public AppModule(MyApplication application) {
         mApplication = application;
     }
 
     @Provides
     @Singleton
-    Application provideApplication() {
+    MyApplication provideApplication() {
         return mApplication;
     }
 
@@ -66,6 +66,14 @@ public class AppModule {
                         }).create();
     }
 
+
+    @Provides
+    @Singleton
+    HttpProxyCacheServer provideProxyCache(MyApplication application){
+        return new HttpProxyCacheServer.Builder(application)
+                .maxCacheFilesCount(10)
+                .build();
+    }
 
 
 }

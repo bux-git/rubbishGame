@@ -2,6 +2,8 @@ package com.zx.rubbishgame.utils;
 
 import android.util.SparseArray;
 
+import com.zx.rubbishgame.R;
+import com.zx.rubbishgame.banner.BannerBean;
 import com.zx.rubbishgame.bean.RbItem;
 import com.zx.rubbishgame.bean.RbType;
 
@@ -31,6 +33,8 @@ public class DataCons {
     //及格分数
     public static final int PASS_SOURCE = 6;
     public static final long MAX_GO_MAIN = 5 * 1000;
+    public static final long BANNER_VIDEO_DELAY = 6 * 1000;
+    public static final long BANNER_IMG_DELAY = 10 * 1000;
 
     static {
         //lv1
@@ -127,6 +131,7 @@ public class DataCons {
 
     /**
      * 最后一关
+     *
      * @param lv
      * @return
      */
@@ -163,4 +168,29 @@ public class DataCons {
     }
 
 
+    public static List<BannerBean> getBannerData() {
+        List<BannerBean> list = new ArrayList<>();
+        BannerBean bean = new BannerBean();
+        bean.setPic(R.drawable.b1);
+        bean.setType(BannerBean.IMG);
+        list.add(bean);
+
+        BannerBean bean1 = new BannerBean();
+        bean1.setPic(R.drawable.b2);
+        bean1.setType(BannerBean.IMG);
+        list.add(bean1);
+
+        BannerBean bean2 = new BannerBean();
+        bean2.setRawId(R.raw.video1);
+        bean2.setType(BannerBean.VIDEO);
+        list.add(bean2);
+
+        return list;
+    }
+
+
+
+
 }
+
+

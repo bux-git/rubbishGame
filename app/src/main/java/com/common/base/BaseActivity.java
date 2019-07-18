@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.MotionEvent;
+import android.view.WindowManager;
 
 import com.billy.android.loading.Gloading;
 import com.common.util.L;
@@ -35,6 +36,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         mContext = this;
         L.d("onCreate: " + this.getLocalClassName());
         setContentView(setLayoutId());
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         mUnbinder = ButterKnife.bind(this);
 
 

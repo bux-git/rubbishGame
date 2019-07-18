@@ -18,4 +18,8 @@
     <color name="color_22">#FF222222</color>
 
     <color name="brown">#7a583e</color>
+
+
+    <color name="controller_bg_dark">#66000000</color>
+    <color name="controller_bg_light">#00000000</color>
 </resources>

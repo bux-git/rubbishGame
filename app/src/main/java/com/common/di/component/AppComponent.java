@@ -4,6 +4,7 @@ package com.common.di.component;
 import com.common.di.module.AppModule;
 import com.common.di.module.HttpModule;
 import com.common.http.ApiService;
+import com.danikula.videocache.HttpProxyCacheServer;
 import com.google.gson.Gson;
 
 import javax.inject.Singleton;
@@ -27,5 +28,7 @@ public interface AppComponent {
     Gson getGson();
 
     OkHttpClient getOkHttpClient();
+
+    HttpProxyCacheServer getProxyCacheServer();
 
 }
